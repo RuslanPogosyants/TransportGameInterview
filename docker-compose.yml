@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_PATH: /data/cargo_guild.db
+    volumes:
+      - cargo_guild_data:/data
+volumes:
+  cargo_guild_data:
